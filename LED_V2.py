@@ -5,14 +5,14 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 # GPIO pins
-led_pins = [10, 12, 16, 18, 22, 24, 26, 28]  # LEDs connected to GPIO 2 through 9
-button_increment = 17               # Button to increment counter
-button_reset = 27                   # Button to reset counter
+led_pins = [10, 12, 16, 18, 22, 24, 26, 11]  # LEDs connected to GPIO 2 through 9
+button_increment = 13               # Button to increment counter
+button_reset = 15                   # Button to reset counter
 
 # Set up LED pins as outputs
-for pin in led_pins:
-    GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.LOW)
+#for pin in led_pins:
+    #GPIO.setup(pin, GPIO.OUT)
+    #GPIO.output(pin, GPIO.LOW)
 
 # Set up button pins as inputs with internal pull-up resistors
 GPIO.setup(button_increment, GPIO.IN, pull_up_down=GPIO.PUD_UP)
