@@ -1,14 +1,14 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 # LED GPIO pins in game order (Red, Red, Red, Green, Yellow, Yellow, Yellow)
-led_pins = [2, 3, 4, 17, 27, 22, 10]
+led_pins = [10, 12, 16, 18, 22, 24, 26]
 green_led_index = 3  # index of green LED
 
 # Button GPIO pin
-button_pin = 9
+button_pin = 15
 
 # Set difficulty (smaller = faster)
 delay = 0.15  # seconds between LEDs — tweak for difficulty
